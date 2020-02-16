@@ -1,88 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Target counter</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Target counter</title>
 </head>
-
 <body>
-
-    <header>
-        <h1>Target counter</h1>
-    </header>
-
-    <section class="target">
-        The target:
-        <form action="">
-            <ul>
-                <li>in videos: <input type="number" placeholder="Write value"> <span id="vidValue">0</span></li>
-                <li>in comments:<input type="number" placeholder="Write value"><span id="comValue">0</span></li>
-            </ul>
-            <button>submit</button>
-        </form>
+  <h1>Target counter</h1>
+  <section class="form"></section>
+  <section class="calculator">
+    <section class="video">
+        <button class="button" data-parent="video" data-job="minus">-</button>   
+        <span>VIDEO</span>
+        <button class="button" data-parent="video" data-job="plus">+</button>   
+        <span data-parent="video" data-job="quantity">0</span>
     </section>
+    <section class="comment">
+         <button class="button" data-parent="comment" data-job="minus">-</button>   
+        <span>COMMENT</span>
+        <button class="button" data-parent="comment" data-job="plus">+</button>   
+        <span data-parent="comment" data-job="quantity">0</span>
 
-    <section class="calculator">
-        <div class="target">
-            <div class="comment">
-                <button class="minus">-</button>
-                <span>comment</span>
-                <button class="plus">+</button>
-                <div><span>0</span></div> 
-                <!-- in the span i need to always have the value of comments incremented -->
-            </div>
-            <div class="video">
-                <button class="minus">-</button>
-                <span>video</span>
-                <button class="plus">+</button>
-                <div><span>0</span></div>
-
-            </div>
-            <div class="livestream">
-                <button class="minus">-</button>
-                <span>livestream</span>
-                <button class="plus">+</button>
-                <div><span>0</span></div>
-
-            </div>
-        </div>
-
-        <div class="weight">
-            <div class="comment">
-                <span class="comment">0</span>
-            </div>
-            <div class="video">
-                <span class="video">0</span>
-            </div>
-            <div class="livestream">
-                <span class="livestream">0</span>
-            </div>
-        </div>
     </section>
+    <section class="livestream">
+        <button class="button" data-parent="livestream" data-job="minus">-</button>   
+        <span>LIVE STREAM</span>
+        <button class="button" data-parent="livestream" data-job="plus">+</button> 
+        <span data-parent="livestream" data-job="quantity">0</span>
 
-    <section class="result">
-<span>        your total target measured in videos done: <span class="result">0</span> out of <span>maxValue</span></span>   
-<span>        your total target measured in comments done: <span class="result">0</span> out of <span>maxValue</span></span>   
-<span>        your total target in %: <span class="result">0</span> out of <span>maxValue</span></span>   
-
-
-
- </section>
-
-    <section class="reset">
-        <button class="reset">reset all</button>
     </section>
-
-
-
-
-
-
-    <script src="script.js"></script>
+  </section>
+  <section class="targetView"></section>
+  
+  <script src="script.js"></script>
 </body>
-
 </html>

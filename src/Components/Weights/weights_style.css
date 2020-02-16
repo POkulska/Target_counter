@@ -1,0 +1,9 @@
+/* .weights {
+    color: pink;
+} */
+.header {
+    padding-left:1rem;
+
+    border-bottom: 2px solid black;
+    /* background-color: rgb(218, 255, 253); */
+}
